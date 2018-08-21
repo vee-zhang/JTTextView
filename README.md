@@ -8,6 +8,14 @@ JTTextView是一个Android的EditText扩展，集成了较多的功能，简单�
 
 注意：由于Android密码框明文显示也是受保护的，所以再录制明文显示时会黑屏，而实际真机调试并不会！推荐自己下载demo真机跑一下😊
 
+## 功能
+
+1. 四个方向的图标在点击时可自动替换，并且有相应的回调listener。
+2. 可随焦点改变自动显示/隐藏图标。
+3. 具备「点选」「点松」两种模式。
+4. 解决了Android文字下划线麻烦的问题。
+5. 两种文字托盘样式，可高度自定义。
+
 ## 集成
 
 ```groovy
@@ -70,6 +78,12 @@ jt1.setOnDrawableClickListener { switchState, view, actionId, currentText ->
 |bottomLineStroke|float||托盘线条粗细|
 |bottomLineFocusStroke|color|bottomLineStroke|托盘聚焦线条粗细|
 |bottomLineStyle|color|line/wall|托盘样式，line:直线   wall:城墙（两端出头）|
+
+## 未来想加入的功能
+
+1. 多行文字在中间用...缩略（Android目前只支持单行文字在中间缩略）
+2. 加入多种托盘样式
+3. 还想要自行车？你说要那种？请提issues。
 
 ## JT是什么意思？
 
