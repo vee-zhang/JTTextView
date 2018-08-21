@@ -4,7 +4,7 @@
 
 JTTextView是一个Android的EditText扩展，集成了较多的功能，简单易用，免去了开发很多的工作量。
 
-![效果预览]("https://github.com/william198824/JTTextView/blob/master/play.gif?raw=true")
+![效果预览](https://github.com/william198824/JTTextView/blob/master/play.gif?raw=true)
 
 ## 集成
 
