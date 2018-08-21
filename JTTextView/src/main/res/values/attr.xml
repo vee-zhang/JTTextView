@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="JTTextView">
+        <attr name="drawableStart_action" format="reference"/>
+        <attr name="drawableTop_action" format="reference"/>
+        <attr name="drawableEnd_action" format="reference"/>
+        <attr name="drawableBottom_action" format="reference"/>
+
+        <attr name="autoReset" format="boolean"/>
+        <attr name="autoDisplay" format="boolean"/>
+        <attr name="underLine" format="boolean"/>
+        <attr name="bottomLine" format="boolean"/>
+
+        <attr name="bottomLineColor" format="color"/>
+        <attr name="bottomLineFocusColor" format="color"/>
+        <attr name="bottomLineStroke" format="float"/>
+        <attr name="bottomLineFocusStroke" format="float"/>
+        <attr name="bottomLineStyle" >
+            <enum name="line" value="0"/>
+            <enum name="wall" value="1"/>
+            <!-- todo 两头是圆点的 -->
+            <!-- todo 两头是圆圈的 -->
+            <!-- todo 两头是三角的 -->
+            <!-- todo 两头是矩形的 -->
+            <!-- todo 两头是箭头的 -->
+        </attr>
+        <attr name="bottomLineFocusStyle" >
+            <enum name="line" value="0"/>
+            <enum name="wall" value="1"/>
+            <!-- todo 两头是圆点的 -->
+            <!-- todo 两头是圆圈的 -->
+            <!-- todo 两头是三角的 -->
+            <!-- todo 两头是矩形的 -->
+            <!-- todo 两头是箭头的 -->
+        </attr>
+
+        <attr name="lineColor_click" format="color"  />
+        <attr name="lineColor_unclick" format="color"  />
+    </declare-styleable>
+</resources>

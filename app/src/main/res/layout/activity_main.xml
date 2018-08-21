@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.william.jttextview.JTTextView
+        android:id="@+id/jt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/none"
+        app:drawableStart_action="@drawable/yes"
+        android:drawableTop="@drawable/none"
+        app:drawableTop_action="@drawable/yes"
+        android:drawableRight="@drawable/none"
+        app:drawableEnd_action="@drawable/yes"
+        android:drawableBottom="@drawable/none"
+        app:drawableBottom_action="@drawable/yes"
+        android:text="single click" />
+
+    <com.william.jttextview.JTTextView
+        android:id="@+id/jt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawablePadding="10dp"
+        android:drawableLeft="@drawable/nosee"
+        app:drawableStart_action="@drawable/see"
+        android:drawableTop="@drawable/nosee"
+        app:drawableTop_action="@drawable/see"
+        android:drawableRight="@drawable/nosee"
+        app:drawableEnd_action="@drawable/see"
+        android:drawableBottom="@drawable/nosee"
+        app:drawableBottom_action="@drawable/see"
+        android:inputType="textPassword"
+        app:autoReset="true"
+        app:autoDisplay="true"
+        android:text="i'm master's password" />
+
+    <com.william.jttextview.JTTextView
+        android:id="@+id/jt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:autoDisplay="true"
+        app:autoReset="true"
+        app:underLine="true"
+        android:editable="false"
+        android:textSize="22sp"
+        android:text="i like a link" />
+
+    <com.william.jttextview.JTTextView
+        android:id="@+id/jt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:autoDisplay="true"
+        app:autoReset="true"
+        app:bottomLine="true"
+        app:bottomLineColor="#f00"
+        app:bottomLineStroke="1.0"
+        app:bottomLineFocusColor="#00f"
+        app:bottomLineFocusStroke="5.0"
+        app:bottomLineStyle="wall"
+        android:textSize="22sp"
+        android:text="i have a bottom line" />
+
+</LinearLayout>
