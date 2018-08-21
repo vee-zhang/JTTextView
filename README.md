@@ -71,6 +71,12 @@ jt1.setOnDrawableClickListener { switchState, view, actionId, currentText ->
 |bottomLineFocusStroke|color|bottomLineStroke|托盘聚焦线条粗细|
 |bottomLineStyle|color|line/wall|托盘样式，line:直线   wall:城墙（两端出头）|
 
+## JT是什么意思？
+
+JT是江豚的缩写，我希望我写的每一个开源框架，在给大家带来便利的同时，也让大家了解到长江江豚这种**天生就会微笑直到濒危**的可爱动物。
+
+![江豚](https://gss1.bdstatic.com/9vo3dSag_xI4khGkpoWK1HF6hhy/baike/c0%3Dbaike80%2C5%2C5%2C80%2C26/sign=176a26ad3687e950561afb3e71513826/738b4710b912c8fc62a4dfa3f0039245d688210c.jpg)
+
 ## License
 
     Copyright 2018 william Inc.
