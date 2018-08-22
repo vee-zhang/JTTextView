@@ -6,13 +6,13 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.support.v7.widget.AppCompatEditText;
 import android.text.Editable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
+import android.widget.EditText;
 
 
-public class JTTextView extends AppCompatEditText {
+public class JTTextView extends EditText {
 
     private static final int ACTION_NONE = -1;
     public static final int ACTION_START = 0;
