@@ -1,6 +1,6 @@
 # JTTextView
 
-  [ ![Download](https://api.bintray.com/packages/william198824/maven/JTTextView/images/download.svg) ](https://bintray.com/william198824/maven/JTTextView/_latestVersion)(https://bintray.com/william198824/maven/JTCharIndexView/_latestVersion)  [![License](https://img.shields.io/badge/License-Apache--2.0%20-blue.svg)](./LICENSE)
+![Download](https://api.bintray.com/packages/william198824/maven/JTTextView/images/download.svg)   [![License](https://img.shields.io/badge/License-Apache--2.0%20-blue.svg)](./LICENSE)
 
 JTTextView是一个Android的EditText扩展，集成了较多的功能，简单易用，免去了开发很多的工作量。
 
