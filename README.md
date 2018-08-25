@@ -8,8 +8,6 @@ JTTextView是一个Android的EditText扩展，集成了较多的功能，简单�
 
 ![表单验证](checkTextValid.gif) 
 
-![表单验证](checkTextValid.gif)
-
 注意：由于Android密码框明文显示也是受保护的，所以再录制明文显示时会黑屏，而实际真机调试并不会！推荐自己下载demo真机跑一下😊
 
 ## 功能
