@@ -67,4 +67,11 @@
         android:textSize="22sp"
         android:text="i have a bottom line" />
 
+    <com.william.jttextview.JTTextView
+        android:id="@+id/jt5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="22sp"
+        android:text="i'm an account" />
+
 </LinearLayout>

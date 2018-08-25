@@ -6,6 +6,8 @@ JTTextView是一个Android的EditText扩展，集成了较多的功能，简单�
 
 ![效果预览](https://github.com/william198824/JTTextView/blob/master/play.gif?raw=true)
 
+![表单验证](checkTextValid.gif)
+
 注意：由于Android密码框明文显示也是受保护的，所以再录制明文显示时会黑屏，而实际真机调试并不会！推荐自己下载demo真机跑一下😊
 
 ## 功能
@@ -15,6 +17,7 @@ JTTextView是一个Android的EditText扩展，集成了较多的功能，简单�
 3. 具备「点选」「点松」两种模式。
 4. 解决了Android文字下划线麻烦的问题。
 5. 两种文字托盘样式，可高度自定义。
+6. 表单验证及自动填充（sames as AutoCompleteTextView)
 
 ## 集成
 
@@ -59,7 +62,35 @@ jt1.setOnDrawableClickListener { switchState, view, actionId, currentText ->
 
             Toast.makeText(this, str, Toast.LENGTH_SHORT).show()
         }
+        
+jt5.validator = object : JTTextView.Validator {
+            override fun isValid(text: CharSequence?): Boolean {
+                return when {
+                    text == null -> false
+                    text.isEmpty() -> {
+                        Toast.makeText(this@MainActivity, "please input your account !", Toast.LENGTH_SHORT).show()
+                        false
+                    }
+                    text.length > 6 -> {
+                        Toast.makeText(this@MainActivity, "your account's length is longer then 6 !", Toast.LENGTH_SHORT).show()
+                        false
+                    }
+                    else -> true
+                }
+            }
+
+            //autoComplete
+            override fun fixText(invalidText: CharSequence?) = invalidText
+
+        }
 ```
+
+### in Java
+
+```java
+It's looks like kotlin ：）
+```
+![i'm busy!](woca.gif)
 
 ## attr属性一览
 

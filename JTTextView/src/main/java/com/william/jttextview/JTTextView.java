@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
 import android.text.Editable;
+import android.text.TextUtils;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.EditText;
@@ -189,10 +190,20 @@ public class JTTextView extends EditText {
     }
 
     public void setOnDrawableClickListener(OnDrawableClickListener listener) {
-        this.listener = listener;
+        this.mOnDrawableClickListener = listener;
     }
 
-    private OnDrawableClickListener listener;
+    private OnDrawableClickListener mOnDrawableClickListener;
+
+    private Validator mValidator;
+
+    public Validator getValidator() {
+        return mValidator;
+    }
+
+    public void setValidator(Validator mValidator) {
+        this.mValidator = mValidator;
+    }
 
     public JTTextView(Context context) {
         this(context, null);
@@ -374,9 +385,9 @@ public class JTTextView extends EditText {
         setCompoundDrawablesWithIntrinsicBounds(currentDrawables[0], currentDrawables[1], currentDrawables[2], currentDrawables[3]);
     }
 
-    private void callBack(boolean b){
-        if (listener != null) {
-            listener.onDrawableClickListener(b, this, actionId, getText());
+    private void callBack(boolean b) {
+        if (mOnDrawableClickListener != null) {
+            mOnDrawableClickListener.onDrawableClickListener(b, this, actionId, getText());
         }
     }
 
@@ -387,10 +398,18 @@ public class JTTextView extends EditText {
         super.onFocusChanged(focused, direction, previouslyFocusedRect);
 
         focus = focused;
+
+        drawableDisplay(focused);
+
+        if (!focused) {
+            performValidation();
+        }
+    }
+
+    private void drawableDisplay(boolean focused){
         if (!autoDisplay) {
             return;
         }
-
         if (focused) {
             setCompoundDrawablesWithIntrinsicBounds(currentDrawables[0], currentDrawables[1], currentDrawables[2], currentDrawables[3]);
         } else {
@@ -461,5 +480,42 @@ public class JTTextView extends EditText {
 
     public interface OnDrawableClickListener {
         void onDrawableClickListener(Boolean switchState, JTTextView view, int actionId, Editable currentText);
+    }
+
+    public interface Validator {
+        /**
+         * Validates the specified text.
+         *
+         * @return true If the text currently in the text editor is valid.
+         * @see #fixText(CharSequence)
+         */
+        boolean isValid(CharSequence text);
+
+        /**
+         * Corrects the specified text to make it valid.
+         *
+         * @param invalidText A string that doesn't pass validation: isValid(invalidText)
+         *                    returns false
+         * @return A string based on invalidText such as invoking isValid() on it returns true.
+         * @see #isValid(CharSequence)
+         */
+        CharSequence fixText(CharSequence invalidText);
+    }
+
+    /**
+     * If a validator was set on this view and the current string is not valid,
+     * ask the validator to fix it.
+     *
+     * @see #getValidator()
+     * @see #setValidator(Validator)
+     */
+    public void performValidation() {
+        if (mValidator == null) return;
+
+        CharSequence text = getText();
+
+        if (!TextUtils.isEmpty(text) && !mValidator.isValid(text)) {
+            setText(mValidator.fixText(text));
+        }
     }
 }

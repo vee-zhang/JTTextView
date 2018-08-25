@@ -9,8 +9,8 @@ android {
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 27
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -42,7 +42,7 @@ publish {
     userOrg = 'william198824'//bintray.com用户名
     groupId = 'com.william'//jcenter上的路径
     artifactId = 'JTTextView'//项目名称
-    publishVersion = '1.0.0'//版本号
+    publishVersion = '1.1.0'//版本号
     desc = 'JTTextView是一个Android-TextView的拓展，提供了很多方便的功能。'//描述，不重要
     website = 'https://github.com/william198824/JTTextView'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
 }
