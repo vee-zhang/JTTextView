@@ -1,12 +1,16 @@
 # JTTextView
 
- [ ![Download](https://api.bintray.com/packages/william198824/maven/JTCharIndexView/images/download.svg) ](https://bintray.com/william198824/maven/JTCharIndexView/_latestVersion)  [![License](https://img.shields.io/badge/License-Apache--2.0%20-blue.svg)](./LICENSE)
+  [ ![Download](https://api.bintray.com/packages/william198824/maven/JTTextView/images/download.svg) ](https://bintray.com/william198824/maven/JTTextView/_latestVersion)(https://bintray.com/william198824/maven/JTCharIndexView/_latestVersion)  [![License](https://img.shields.io/badge/License-Apache--2.0%20-blue.svg)](./LICENSE)
 
 JTTextView是一个Android的EditText扩展，集成了较多的功能，简单易用，免去了开发很多的工作量。
 
 ![效果预览](https://github.com/william198824/JTTextView/blob/master/play.gif?raw=true)
 
+<<<<<<< HEAD
 ![表单验证](checkTextValid.gif) 
+=======
+![表单验证](checkTextValid.gif)
+>>>>>>> 2a171ee... 提交README
 
 注意：由于Android密码框明文显示也是受保护的，所以再录制明文显示时会黑屏，而实际真机调试并不会！推荐自己下载demo真机跑一下😊
 
